@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>jQuery</title>
+    <style>
+        .editable{
+            color:blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container bg-light">
+        <div class="jumbotron">
+            <h1 class="text-center font-weight-bold">Let's Have Fun!</h1>
+            <div class="row justify-content-center align-items-center">
+                <button class="card-btn col-2 m-2" data-card="card1">#btn1</button>
+                <button class="card-btn col-2 m-2" data-card="card2">#btn2</button>
+                <button class="card-btn col-2 m-2" data-card="card3">#btn3</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center align-items-center">
+        <div class="col-3">
+            <div id="card1" class="card border-primary mb-3">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Primary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div id="card2" class="card border-primary mb-3">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Primary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div id="card3" class="card border-primary mb-3">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Primary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul class="list">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>
+            <ul class="sublist">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </li>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            $("#card1").slideUp(1000).slideDown(2000);
+            $("#card2").fadeToggle(1000).fadeToggle(2000);
+            $("#card3").css({ color: 'red', fontWeight: 'bold', opacity: '0.5' })
+            $('.card-btn').on("click",function(){
+                var cardId = $(this).attr('data-card')
+                $('#'+ cardId).toggle();
+                $('#'+ cardId + ' .card-body').html("clicked!");
+            })
+            $("li").on("click", function(){
+                $(this).siblings().removeClass('editable');
+                $(this).addClass('editable')  
+            })
+        });
+    </script>
+</body>
+
+</html>

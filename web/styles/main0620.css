@@ -1,0 +1,48 @@
+
+body{
+    margin:0;
+}
+
+header{
+    background: #999;
+    color: white;    
+    padding: 15px 15px 0 15px;
+}
+
+header h1{
+    margin: 0;
+}
+
+nav ul{
+    margin:0;
+}
+
+nav ul li{
+    background: black;
+    color:white;
+    display: inline-block;
+    list-style-type:  circle;
+    padding: 0.5em 1em;
+    margin: 0;
+}
+
+nav ul li a{
+    color:white;
+}
+
+.col {
+    float: left;
+    width: 31%;
+    margin: 1%;
+    background: #333;
+    color: white;
+}
+
+.row:after{
+    clear: both;
+    content: "";
+    display: table;
+}
+footer {
+    clear: both;
+}

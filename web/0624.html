@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>0624 Test</title>
+    <style>
+        li input{
+            display: none;
+        }
+        li.edit input{
+            display: initial;
+        }
+        li.edit span{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p class="h1 text-center">JavaScript Events</p>
+    </header>
+    <main>
+        <div class="container w-50">
+            <p class="font-weight-bold">Please pick a picture to show</p>
+            <ul>
+                <li>
+                    <a href="#" id="dog-link" data-img="dog-img">Dog</a>
+                </li>
+                <li>
+                    <a href="#" id="cat-link" data-img="cat-img">Cat</a>
+                </li>
+                <li>
+                    <a href="#" id="rabbit-link" data-img="rabbit-img">Rabbit</a>
+                </li>
+            </ul>
+            <img class="d-none w-100" id="dog-img" src="img/dog.jpg" alt="">
+            <img class="d-none w-100" id="cat-img" src="img/cat.jpg" alt="">
+            <img class="d-none w-100" id="rabbit-img" src="img/rabbit.jpg" alt="">
+
+            <ul id=checklist>
+                <li><span>Dog</span><input type="text" value="Dog"></li>
+                <li><span>Cat</span><input type="text" value="Cat"></li>
+                <li><span>Rabbit</span><input type="text" value="Rabbit"></li>
+            </ul>
+        </div>
+
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="js/0624.js"></script>
+</body>
+
+</html>
